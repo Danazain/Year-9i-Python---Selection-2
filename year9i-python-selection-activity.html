@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Year 9I Python Selection Mission</title>
+<style>
+:root{--navy:#1f2d3d;--blue:#407ec9;--teal:#329b91;--gold:#ebb041;--purple:#845ec2;--green:#459c5c;--bg:#f4f7fb;--red:#c95050}
+*{box-sizing:border-box}body{margin:0;font-family:Arial,sans-serif;background:var(--bg);color:#28303a;line-height:1.5}
+header{background:white;border-bottom:6px solid var(--blue);padding:28px 18px;text-align:center}
+h1{margin:0;color:var(--navy);font-size:clamp(30px,5vw,48px)}h2{color:var(--navy)}
+.wrap{max-width:1000px;margin:auto;padding:18px}.card{background:#fff;border-radius:18px;padding:22px;margin:18px 0;box-shadow:0 3px 12px #0001}
+.btn{display:inline-block;background:var(--green);color:white;padding:13px 20px;border-radius:11px;text-decoration:none;font-weight:bold;margin:6px}
+code,pre{font-family:Consolas,monospace}pre{background:#252a31;color:white;padding:18px;border-radius:12px;overflow:auto;font-size:16px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:14px}
+.task{border-left:7px solid var(--blue)}.challenge{border:3px dashed var(--gold);background:#fffaf0}
+.option{background:#eef4fc;border:2px solid #d8e3f2;padding:11px;border-radius:10px;margin:8px 0;cursor:pointer}
+.option:hover{border-color:var(--blue)}.feedback{font-weight:bold;min-height:26px}
+input[type=checkbox]{width:20px;height:20px;vertical-align:middle}.check{display:block;margin:10px 0;font-size:17px}
+.hint{background:#f2eef9;padding:12px;border-radius:10px}summary{cursor:pointer;font-weight:bold}
+.small{font-size:14px}.step{font-weight:bold;color:var(--blue)}
+</style>
+</head>
+<body>
+<header>
+<h1>🐍 Year 9I Python Selection Mission</h1>
+<p>Work slowly. Predict → Code → Run → Check → Fix.</p>
+<a class="btn" href="https://www.programiz.com/python-programming/online-compiler/" target="_blank" rel="noopener">▶ Open Python Online Compiler</a>
+</header>
+<main class="wrap">
+
+<section class="card">
+<h2>🎯 Today’s goal</h2>
+<p>Use <strong>IF, ELSE and ELIF</strong> to make a Python program choose what to do.</p>
+<div class="grid">
+<div><strong>IF</strong><br>Ask a question.</div><div><strong>ELIF</strong><br>Check another question.</div><div><strong>ELSE</strong><br>What happens if the other conditions are False?</div>
+</div>
+</section>
+
+<section class="card">
+<h2>Warm-up: True or False?</h2>
+<p>Click your answer.</p>
+<div id="quiz"></div>
+<p id="score" class="feedback"></p>
+</section>
+
+<section class="card task">
+<h2>Mission 1 — IF + ELSE</h2>
+<p><span class="step">Step 1:</span> Open the Python compiler using the green button above.</p>
+<p><span class="step">Step 2:</span> Type this code. <strong>Do not forget the spaces.</strong></p>
+<pre>age = int(input("Enter age: "))
+
+if age >= 18:
+    print("Adult")
+else:
+    print("Child")</pre>
+<p><span class="step">Step 3:</span> Before you run it, predict:</p>
+<label class="check"><input type="checkbox"> age = 12 → I think it will print <strong>Child</strong>.</label>
+<label class="check"><input type="checkbox"> age = 20 → I think it will print <strong>Adult</strong>.</label>
+<p><span class="step">Step 4:</span> Run both tests. Were your predictions correct?</p>
+<details class="hint"><summary>My code has an error — what should I check?</summary>
+<p>Check the <strong>colon :</strong> after IF and ELSE. Check that both <code>print()</code> lines are indented.</p>
+</details>
+</section>
+
+<section class="card task">
+<h2>Mission 2 — Speed Checker 🚗</h2>
+<p>Build this program <strong>one line at a time</strong>.</p>
+<div class="grid">
+<div><strong>1. INPUT</strong><pre>speed = int(input("Enter speed: "))</pre></div>
+<div><strong>2. IF</strong><pre>if speed > 70:
+    print("Issue Fine")</pre></div>
+<div><strong>3. ELSE</strong><pre>else:
+    print("No Action")</pre></div>
+</div>
+<h3>Test it</h3>
+<label class="check"><input type="checkbox"> Test <strong>60</strong>. Did you get “No Action”?</label>
+<label class="check"><input type="checkbox"> Test <strong>80</strong>. Did you get “Issue Fine”?</label>
+<p><strong>Small change:</strong> Change <code>70</code> to <code>50</code>. Test again. What changed?</p>
+</section>
+
+<section class="card task">
+<h2>Mission 3 — Add ELIF</h2>
+<p>Now we need <strong>three possible results</strong>.</p>
+<p>75 or more → <strong>Issue Fine</strong><br>70–74 → <strong>Warning</strong><br>Below 70 → <strong>No Action</strong></p>
+<pre>speed = int(input("Enter speed: "))
+
+if speed >= 75:
+    print("Issue Fine")
+elif speed >= 70:
+    print("Warning")
+else:
+    print("No Action")</pre>
+<p><strong>Predict first, then run:</strong></p>
+<label class="check"><input type="checkbox"> 60 → No Action</label>
+<label class="check"><input type="checkbox"> 72 → Warning</label>
+<label class="check"><input type="checkbox"> 80 → Issue Fine</label>
+</section>
+
+<section class="card challenge">
+<h2>⭐ Independent Challenge — Score Checker</h2>
+<p>Try to build this yourself in the compiler:</p>
+<p><strong>80 or more</strong> → Excellent<br><strong>50–79</strong> → Pass<br><strong>Below 50</strong> → Try Again</p>
+<p>Start with:</p><pre>score = int(input("Enter score: "))</pre>
+<details class="hint"><summary>Hint 1</summary><p>After INPUT, start with <code>if score >= 80:</code></p></details>
+<details class="hint"><summary>Hint 2</summary><p>Your next condition can be <code>elif score >= 50:</code>. Finish with <code>else:</code>.</p></details>
+<h3>Test your program</h3>
+<label class="check"><input type="checkbox"> Test 90</label>
+<label class="check"><input type="checkbox"> Test 65</label>
+<label class="check"><input type="checkbox"> Test 30</label>
+</section>
+
+<section class="card">
+<h2>🔎 Debug Checklist</h2>
+<label class="check"><input type="checkbox"> Did I use <code>:</code> after IF / ELIF / ELSE?</label>
+<label class="check"><input type="checkbox"> Are my <code>print()</code> lines indented?</label>
+<label class="check"><input type="checkbox"> Did I use <code>==</code> when comparing equal values?</label>
+<label class="check"><input type="checkbox"> Did I test more than one input?</label>
+</section>
+
+<section class="card">
+<h2>Exit Check</h2>
+<p>Say your answers to a partner:</p>
+<p><strong>1.</strong> What does IF do?<br><strong>2.</strong> What does ELSE do?<br><strong>3.</strong> When do we use ELIF?<br><strong>4.</strong> Why is indentation important?</p>
+</section>
+</main>
+
+<script>
+const qs=[
+ ["7 == 7",true],["5 > 8",false],["6 != 7",true],["7 <= 7",true]
+];
+let correct=0,answered=0;
+const q=document.getElementById("quiz"), sc=document.getElementById("score");
+qs.forEach((x,i)=>{
+ const d=document.createElement("div"); d.className="card"; d.style.boxShadow="none"; d.style.border="1px solid #dde4ed";
+ d.innerHTML=`<strong>${i+1}. ${x[0]}</strong><br>
+ <button class="option" onclick="ans(this,${x[1]},true)">TRUE</button>
+ <button class="option" onclick="ans(this,${x[1]},false)">FALSE</button>
+ <span class="feedback"></span>`;
+ q.appendChild(d);
+});
+function ans(btn,right,choice){
+ const parent=btn.parentElement, fb=parent.querySelector(".feedback");
+ if(parent.dataset.done)return;
+ parent.dataset.done=1; answered++;
+ if(choice===right){correct++;fb.textContent=" ✓ Correct!";fb.style.color="#459c5c"}
+ else{fb.textContent=" ✗ Try to explain why.";fb.style.color="#c95050"}
+ if(answered===qs.length)sc.textContent=`You got ${correct} out of ${qs.length}. Now move to Mission 1.`;
+}
+</script>
+</body></html>
